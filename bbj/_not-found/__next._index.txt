@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[7121,[],""]
-3:I[4581,[],""]
-:HL["/bbj/_next/static/css/90e6268c495f7e20.css","style"]
-0:{"buildId":"Inx9K9PlQAhiH61VJb6Xv","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/bbj/_next/static/css/90e6268c495f7e20.css","precedence":"next"}]],["$","html",null,{"lang":"ko","className":"__variable_9b3791 __variable_69e1bd __variable_c4ca76","children":["$","body",null,{"className":"antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]}]]}],"loading":null,"isPartial":false}
