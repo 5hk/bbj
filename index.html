@@ -314,59 +314,69 @@
         <!-- Releases Section -->
         <section id="releases" class="bg-light-gray">
             <div class="section-container">
-                <h2 class="section-title">Releases</h2>
-                <div class="releases-grid">
-                    <!-- Album -->
-                    <div class="release-card">
-                        <div class="release-cover">
-                            <img alt="시작" src="images/releases/album-cover_start.jpg" loading="lazy" width="500" height="500"/>
-                            <div class="release-overlay">
-                                <div class="release-info">
-                                    <h3>시작</h3>
-                                    <p>Gaho &middot; 2020.02.01</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="releases-header">
+                    <h2 class="section-title">Releases</h2>
+                    <div class="releases-filter">
+                        <select id="releases-filter-select" aria-label="Filter releases">
+                            <option value="featured">Popular Hits</option>
+                            <option value="latest">Latest Releases</option>
+                            <option value="albums">Albums</option>
+                            <option value="singles">Singles</option>
+                        </select>
                     </div>
-                    <!-- Album -->
-                    <div class="release-card">
-                        <div class="release-cover">
-                            <img alt="Running" src="images/releases/album-cover_running.jpeg" loading="lazy" width="500" height="500"/>
-                            <div class="release-overlay">
-                                <div class="release-info">
-                                    <h3>Running</h3>
-                                    <p>Gaho &middot; 2020.10.30</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Album -->
-                    <div class="release-card">
-                        <div class="release-cover">
-                            <img alt="Yellow Light" src="images/releases/album-cover_yellow-light.jpg" loading="lazy" width="500" height="500"/>
-                            <div class="release-overlay">
-                                <div class="release-info">
-                                    <h3>Yellow Light</h3>
-                                    <p>Gaho &middot; 2023.06.18</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Album -->
-                    <div class="release-card">
-                        <div class="release-cover">
-                            <img alt="있어줘 Stay Here" src="images/releases/album-cover_stay-here.jpeg" loading="lazy" width="500" height="500"/>
-                            <div class="release-overlay">
-                                <div class="release-info">
-                                    <h3>있어줘 Stay Here</h3>
-                                    <p>Gaho &middot; 2018.05.03</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>      
+                </div>
+                <div class="releases-grid" id="releases-grid">
+                    <!-- Releases will be dynamically loaded here -->
+                </div>
+                <div class="releases-view-all">
+                    <button type="button" class="view-all-btn" id="view-all-btn">
+                        <span>View All Releases</span>
+                        <span class="releases-count">(99)</span>
+                    </button>
                 </div>
             </div>
         </section>
+
+        <!-- Releases Side Panel -->
+        <div class="releases-panel" id="releases-panel">
+            <div class="releases-panel-overlay" id="releases-panel-overlay"></div>
+            <div class="releases-panel-content">
+                <div class="releases-panel-header">
+                    <h3>All Releases <span class="releases-total">(99)</span></h3>
+                    <button type="button" class="panel-close-btn" id="panel-close-btn" aria-label="Close panel">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="releases-panel-filters">
+                    <div class="panel-search">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="panel-search-input" placeholder="Search releases..." aria-label="Search releases"/>
+                    </div>
+                    <div class="panel-filter-buttons">
+                        <button type="button" class="filter-btn active" data-filter="all">All</button>
+                        <button type="button" class="filter-btn" data-filter="album">Albums</button>
+                        <button type="button" class="filter-btn" data-filter="single">Singles</button>
+                    </div>
+                    <div class="panel-sort">
+                        <select id="panel-sort-select" aria-label="Sort releases">
+                            <option value="latest">Latest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popularity">Most Popular</option>
+                            <option value="title">Title (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="releases-panel-grid" id="releases-panel-grid">
+                    <!-- All releases will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
 
         <!-- News Section -->
         <section id="news">
@@ -421,5 +431,8 @@
 
     <!-- External JavaScript - Deferred loading -->
     <script src="scripts/main.js" defer></script>
+    <!-- Load data first, then releases functionality -->
+    <script src="scripts/releases-data.js"></script>
+    <script src="scripts/releases.js" defer></script>
 </body>
 </html>
