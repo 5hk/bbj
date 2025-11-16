@@ -36,6 +36,67 @@
             line-height: 1.6;
         }
 
+        /* Skeleton Loading Animation */
+        @keyframes skeleton-loading {
+            0% {
+                background-color: hsl(0, 0%, 90%);
+            }
+            50% {
+                background-color: hsl(0, 0%, 95%);
+            }
+            100% {
+                background-color: hsl(0, 0%, 90%);
+            }
+        }
+
+        .skeleton {
+            animation: skeleton-loading 1.5s ease-in-out infinite;
+            background-color: hsl(0, 0%, 90%);
+        }
+
+        /* Image container with skeleton */
+        .image-loading {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-loading::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                hsl(0, 0%, 90%) 0%,
+                hsl(0, 0%, 95%) 50%,
+                hsl(0, 0%, 90%) 100%
+            );
+            background-size: 200% 100%;
+            animation: skeleton-shimmer 1.5s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .image-loading img {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-loading.loaded::before {
+            display: none;
+        }
+
+        .image-loading.loaded img {
+            opacity: 1;
+        }
+
+        @keyframes skeleton-shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -393,7 +454,7 @@
         /* Releases Section */
         .releases-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(8, 1fr);
             gap: 0.5rem;
         }
 
@@ -878,8 +939,42 @@
     </footer>
 
     <script>
+        // Image loading skeleton effect
+        function initImageLoading() {
+            // Select all images in specific sections
+            const imageContainers = document.querySelectorAll(
+                '.about-image, .artist-image-container, .release-cover'
+            );
+            
+            imageContainers.forEach(container => {
+                // Add loading class
+                container.classList.add('image-loading');
+                
+                const img = container.querySelector('img');
+                if (img) {
+                    // Check if image is already loaded (cached)
+                    if (img.complete && img.naturalHeight !== 0) {
+                        container.classList.add('loaded');
+                    } else {
+                        // Add load event listener
+                        img.addEventListener('load', function() {
+                            container.classList.add('loaded');
+                        });
+                        
+                        // Handle error case
+                        img.addEventListener('error', function() {
+                            container.classList.add('loaded');
+                        });
+                    }
+                }
+            });
+        }
+
         // Mobile touch support for release cards
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize image loading
+            initImageLoading();
+            
             const releaseCards = document.querySelectorAll('.release-card');
             
             // Check if device is mobile/tablet
