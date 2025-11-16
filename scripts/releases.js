@@ -7,7 +7,7 @@
     let filteredReleases = [];
     let currentFilter = 'featured';
     let panelFilter = 'all';
-    let panelSort = 'latest';
+    let panelSort = 'popularity';
     let searchQuery = '';
 
     // DOM Elements
@@ -282,6 +282,7 @@
     function createPanelReleaseCard(release) {
         const formattedDate = formatDate(release.releaseDate);
         const typeLabel = release.type.charAt(0).toUpperCase() + release.type.slice(1);
+        const albumName = release.albumName || '-';
 
         return `
             <div class="panel-release-card">
@@ -291,6 +292,7 @@
                 <div class="panel-release-details">
                     <h4>${release.title}</h4>
                     <p class="artist">${release.artist}</p>
+                    <p class="album-name">${albumName}</p>
                     <p class="date">${formattedDate}</p>
                     <span class="type-badge">${typeLabel}</span>
                 </div>

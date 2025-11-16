@@ -657,6 +657,15 @@ section {
     margin-bottom: 0.25rem;
 }
 
+.panel-release-details .album-name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    margin-bottom: 0.25rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
 .panel-release-details .date {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.75rem;
