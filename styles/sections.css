@@ -481,16 +481,17 @@ section {
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 2000;
+    z-index: -1;
     pointer-events: none;
     visibility: hidden;
-    display: none;
+    opacity: 0;
 }
 
 .releases-panel.active {
+    z-index: 2000;
     pointer-events: auto;
     visibility: visible;
-    display: block;
+    opacity: 1;
 }
 
 .releases-panel-overlay {
