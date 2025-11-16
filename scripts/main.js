@@ -104,6 +104,43 @@ function initAboutImageAnimation() {
     observer.observe(aboutImage);
 }
 
+// Mobile menu toggle
+function initMobileMenu() {
+    const menuButton = document.querySelector('.menu-button');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (menuButton && navMenu) {
+        menuButton.addEventListener('click', function() {
+            // Toggle menu visibility
+            navMenu.classList.toggle('active');
+            menuButton.classList.toggle('active');
+            
+            // Toggle aria-expanded attribute for accessibility
+            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Close menu when clicking on a menu item
+        const menuLinks = navMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                menuButton.classList.remove('active');
+                menuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('nav')) {
+                navMenu.classList.remove('active');
+                menuButton.classList.remove('active');
+                menuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+}
+
 // Mobile touch support for release cards
 function initReleaseTouchSupport() {
     const releaseCards = document.querySelectorAll('.release-card');
@@ -141,6 +178,9 @@ function initReleaseTouchSupport() {
 
 // Initialize all functions when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize mobile menu
+    initMobileMenu();
+    
     // Initialize image loading
     initImageLoading();
     
