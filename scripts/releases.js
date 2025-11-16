@@ -141,7 +141,7 @@
             case 'featured':
                 releasesToShow = allReleases
                     .filter(r => r.featured)
-                    .sort((a, b) => b.popularity - a.popularity)
+                    .sort((a, b) => a.popularity - b.popularity)  // Lower number = higher popularity (ranking system)
                     .slice(0, displayCount);
                 break;
             case 'latest':
@@ -259,7 +259,7 @@
                 filteredReleases.sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
                 break;
             case 'popularity':
-                filteredReleases.sort((a, b) => b.popularity - a.popularity);
+                filteredReleases.sort((a, b) => a.popularity - b.popularity);  // Lower number = higher popularity (ranking system)
                 break;
             case 'title':
                 filteredReleases.sort((a, b) => a.titleEn.localeCompare(b.titleEn));

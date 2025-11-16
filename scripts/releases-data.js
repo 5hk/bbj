@@ -4,13 +4,16 @@ const RELEASES_DATA = {
     {
       "id": "1",
       "title": "시작",
-      "titleEn": "Start",
+      "titleEn": "Start Over",
       "artist": "Gaho",
       "releaseDate": "2020-02-01",
-      "type": "album",
+      "type": "single",
+      "albumName": "이태원 클라쓰 OST Part 2",
+      "albumNameEn": "Itaewon Class OST Part 2",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": true,
-      "popularity": 95
+      "popularity": 1,
+      "trackCount": 1
     },
     {
       "id": "2",
@@ -18,10 +21,13 @@ const RELEASES_DATA = {
       "titleEn": "Running",
       "artist": "Gaho",
       "releaseDate": "2020-10-30",
-      "type": "album",
+      "type": "single",
+      "albumName": "스타트업 OST Part 5",
+      "albumNameEn": "스타트업 OST Part 5",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": true,
-      "popularity": 92
+      "popularity": 2,
+      "trackCount": 1
     },
     {
       "id": "3",
@@ -30,9 +36,12 @@ const RELEASES_DATA = {
       "artist": "Gaho",
       "releaseDate": "2023-06-18",
       "type": "album",
+      "albumName": "Yellow Light",
+      "albumNameEn": "Yellow Light",
+      "trackCount": 6,
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": true,
-      "popularity": 88
+      "popularity": 3
     },
     {
       "id": "4",
@@ -41,64 +50,82 @@ const RELEASES_DATA = {
       "artist": "Gaho",
       "releaseDate": "2018-05-03",
       "type": "single",
+      "albumName": null,
+      "albumNameEn": null,
       "coverImage": "images/releases/album-cover_stay-here.jpeg",
       "featured": true,
-      "popularity": 97
+      "popularity": 4,
+      "trackCount": 1
     },
     {
       "id": "5",
-      "title": "시작",
-      "titleEn": "Start",
+      "title": "Go On",
+      "titleEn": "Go On",
       "artist": "Gaho",
-      "releaseDate": "2019-11-24",
+      "releaseDate": "2025.05.25",
       "type": "single",
-      "coverImage": "images/releases/album-cover_start.jpg",
+      "coverImage": "images/releases/album-cover_go-on.jpeg",
       "featured": true,
-      "popularity": 94
+      "popularity": 5,
+      "albumName": "불꽃야구 OST Part.2",
+      "albumNameEn": "불꽃야구 OST Part.2",
+      "trackCount": 1
     },
     {
       "id": "6",
-      "title": "Fly",
-      "titleEn": "Fly",
+      "title": "바람",
+      "titleEn": "바람",
       "artist": "Gaho",
-      "releaseDate": "2019-03-27",
+      "releaseDate": "2020.10.03",
       "type": "single",
-      "coverImage": "images/releases/album-cover_start.jpg",
+      "coverImage": "images/releases/album-cover_stranger-2.jpeg",
       "featured": true,
-      "popularity": 89
+      "popularity": 6,
+      "albumName": "비밀의 숲 2 OST",
+      "albumNameEn": "Stranger Things 2 OST",
+      "trackCount": 1
     },
     {
       "id": "7",
-      "title": "Pink Walk",
-      "titleEn": "Pink Walk",
-      "artist": "Gaho",
-      "releaseDate": "2020-07-15",
-      "type": "single",
-      "coverImage": "images/releases/album-cover_running.jpeg",
-      "featured": true,
-      "popularity": 86
-    },
-    {
-      "id": "8",
-      "title": "Rush Hour",
-      "titleEn": "Rush Hour",
-      "artist": "Gaho",
-      "releaseDate": "2021-02-09",
-      "type": "single",
-      "coverImage": "images/releases/album-cover_running.jpeg",
-      "featured": true,
-      "popularity": 91
-    },
-    {
-      "id": "9",
       "title": "Right Now",
       "titleEn": "Right Now",
       "artist": "Gaho",
+      "releaseDate": "2021-11-23",
+      "type": "album",
+      "coverImage": "images/releases/album-cover_fireworks.jpeg",
+      "featured": true,
+      "popularity": 7,
+      "albumName": "Fireworks",
+      "albumNameEn": "Fireworks",
+      "trackCount": 12
+    },
+    {
+      "id": "8",
+      "title": "끝이 아니길",
+      "titleEn": "끝이 아니길",
+      "artist": "Gaho",
+      "releaseDate": "2021-02-09",
+      "type": "single",
+      "coverImage": "images/releases/album-cover_not-the-end.jpeg",
+      "featured": true,
+      "popularity": 8,
+      "albumName": "황후의 품격 OST",
+      "albumNameEn": "황후의 품격 OST",
+      "trackCount": 1
+    },
+    {
+      "id": "9",
+      "title": "시간",
+      "titleEn": "시간",
+      "artist": "Gaho",
       "releaseDate": "2021-06-23",
       "type": "single",
-      "coverImage": "images/releases/album-cover_yellow-light.jpg",
+      "coverImage": "images/releases/album-cover_time-ost.jpeg",
       "featured": true,
-      "popularity": 85
+      "popularity": 9,
+      "albumName": "시간 OST",
+      "albumNameEn": "시간 OST",
+      "trackCount": 1
     },
     {
       "id": "10",
@@ -109,7 +136,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": true,
-      "popularity": 82
+      "popularity": 10,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "11",
@@ -120,7 +150,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": true,
-      "popularity": 80
+      "popularity": 11,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "12",
@@ -131,7 +164,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": true,
-      "popularity": 78
+      "popularity": 12,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "13",
@@ -142,7 +178,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 84
+      "popularity": 13,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "14",
@@ -153,7 +192,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": true,
-      "popularity": 81
+      "popularity": 14,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "15",
@@ -164,7 +206,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 87
+      "popularity": 15,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "16",
@@ -175,7 +220,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": true,
-      "popularity": 79
+      "popularity": 16,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "17",
@@ -186,7 +234,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": true,
-      "popularity": 76
+      "popularity": 17,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "18",
@@ -197,7 +248,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 83
+      "popularity": 18,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "19",
@@ -208,7 +262,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": true,
-      "popularity": 77
+      "popularity": 19,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "20",
@@ -219,7 +276,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": true,
-      "popularity": 74
+      "popularity": 20,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "21",
@@ -230,7 +290,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": true,
-      "popularity": 72
+      "popularity": 21,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "22",
@@ -241,7 +304,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": true,
-      "popularity": 75
+      "popularity": 22,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "23",
@@ -252,7 +318,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": true,
-      "popularity": 73
+      "popularity": 23,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "24",
@@ -263,7 +332,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": true,
-      "popularity": 88
+      "popularity": 24,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "25",
@@ -274,7 +346,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": true,
-      "popularity": 71
+      "popularity": 25,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "26",
@@ -285,7 +360,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": true,
-      "popularity": 70
+      "popularity": 26,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "27",
@@ -296,7 +374,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": true,
-      "popularity": 69
+      "popularity": 27,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "28",
@@ -307,7 +388,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": true,
-      "popularity": 68
+      "popularity": 28,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "29",
@@ -318,7 +402,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 86
+      "popularity": 29,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "30",
@@ -329,7 +416,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 67
+      "popularity": 30,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "31",
@@ -340,7 +430,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 66
+      "popularity": 31,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "32",
@@ -351,7 +444,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 65
+      "popularity": 32,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "33",
@@ -362,7 +458,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 64
+      "popularity": 33,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "34",
@@ -373,7 +472,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 85
+      "popularity": 34,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "35",
@@ -384,7 +486,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 63
+      "popularity": 35,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "36",
@@ -395,7 +500,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 62
+      "popularity": 36,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "37",
@@ -406,7 +514,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 61
+      "popularity": 37,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "38",
@@ -417,7 +528,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 60
+      "popularity": 38,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "39",
@@ -428,7 +542,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 84
+      "popularity": 39,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "40",
@@ -439,7 +556,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 59
+      "popularity": 40,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "41",
@@ -450,7 +570,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 58
+      "popularity": 41,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "42",
@@ -461,7 +584,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 57
+      "popularity": 42,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "43",
@@ -472,7 +598,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 56
+      "popularity": 43,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "44",
@@ -483,7 +612,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 90
+      "popularity": 44,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "45",
@@ -494,7 +626,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 55
+      "popularity": 45,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "46",
@@ -505,7 +640,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 54
+      "popularity": 46,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "47",
@@ -516,7 +654,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 53
+      "popularity": 47,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "48",
@@ -527,7 +668,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 52
+      "popularity": 48,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "49",
@@ -538,7 +682,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 89
+      "popularity": 49,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "50",
@@ -549,7 +696,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 51
+      "popularity": 50,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "51",
@@ -560,7 +710,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 50
+      "popularity": 51,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "52",
@@ -571,7 +724,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 49
+      "popularity": 52,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "53",
@@ -582,7 +738,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 48
+      "popularity": 53,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "54",
@@ -593,7 +752,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 88
+      "popularity": 54,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "55",
@@ -604,7 +766,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 47
+      "popularity": 55,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "56",
@@ -615,7 +780,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 46
+      "popularity": 56,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "57",
@@ -626,7 +794,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 45
+      "popularity": 57,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "58",
@@ -637,7 +808,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 44
+      "popularity": 58,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "59",
@@ -648,7 +822,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 87
+      "popularity": 59,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "60",
@@ -659,7 +836,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 43
+      "popularity": 60,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "61",
@@ -670,7 +850,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 42
+      "popularity": 61,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "62",
@@ -681,7 +864,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 41
+      "popularity": 62,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "63",
@@ -692,7 +878,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 40
+      "popularity": 63,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "64",
@@ -703,7 +892,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 86
+      "popularity": 64,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "65",
@@ -714,7 +906,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 39
+      "popularity": 65,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "66",
@@ -725,7 +920,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 38
+      "popularity": 66,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "67",
@@ -736,7 +934,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 37
+      "popularity": 67,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "68",
@@ -747,7 +948,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 36
+      "popularity": 68,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "69",
@@ -758,7 +962,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 85
+      "popularity": 69,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "70",
@@ -769,7 +976,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 35
+      "popularity": 70,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "71",
@@ -780,7 +990,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 34
+      "popularity": 71,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "72",
@@ -791,7 +1004,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 33
+      "popularity": 72,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "73",
@@ -802,7 +1018,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 32
+      "popularity": 73,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "74",
@@ -813,7 +1032,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 93
+      "popularity": 74,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "75",
@@ -824,7 +1046,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 31
+      "popularity": 75,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "76",
@@ -835,7 +1060,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 30
+      "popularity": 76,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "77",
@@ -846,7 +1074,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 29
+      "popularity": 77,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "78",
@@ -857,7 +1088,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 28
+      "popularity": 78,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "79",
@@ -868,7 +1102,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 92
+      "popularity": 79,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "80",
@@ -879,7 +1116,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 27
+      "popularity": 80,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "81",
@@ -890,7 +1130,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 26
+      "popularity": 81,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "82",
@@ -901,7 +1144,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 25
+      "popularity": 82,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "83",
@@ -912,7 +1158,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 24
+      "popularity": 83,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "84",
@@ -923,7 +1172,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 91
+      "popularity": 84,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "85",
@@ -934,7 +1186,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 23
+      "popularity": 85,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "86",
@@ -945,7 +1200,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 22
+      "popularity": 86,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "87",
@@ -956,7 +1214,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 21
+      "popularity": 87,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "88",
@@ -967,7 +1228,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 20
+      "popularity": 88,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "89",
@@ -978,7 +1242,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 90
+      "popularity": 89,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "90",
@@ -989,7 +1256,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 19
+      "popularity": 90,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "91",
@@ -1000,7 +1270,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 18
+      "popularity": 91,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "92",
@@ -1011,7 +1284,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 17
+      "popularity": 92,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "93",
@@ -1022,7 +1298,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 16
+      "popularity": 93,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "94",
@@ -1033,7 +1312,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 89
+      "popularity": 94,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "95",
@@ -1044,7 +1326,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 15
+      "popularity": 95,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "96",
@@ -1055,7 +1340,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 14
+      "popularity": 96,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "97",
@@ -1066,7 +1354,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_running.jpeg",
       "featured": false,
-      "popularity": 13
+      "popularity": 97,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "98",
@@ -1077,7 +1368,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_start.jpg",
       "featured": false,
-      "popularity": 12
+      "popularity": 98,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     },
     {
       "id": "99",
@@ -1088,8 +1382,10 @@ const RELEASES_DATA = {
       "type": "single",
       "coverImage": "images/releases/album-cover_yellow-light.jpg",
       "featured": false,
-      "popularity": 88
+      "popularity": 99,
+      "albumName": null,
+      "albumNameEn": null,
+      "trackCount": 1
     }
   ]
 };
-
