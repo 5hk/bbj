@@ -484,11 +484,13 @@ section {
     z-index: 2000;
     pointer-events: none;
     visibility: hidden;
+    display: none;
 }
 
 .releases-panel.active {
     pointer-events: auto;
     visibility: visible;
+    display: block;
 }
 
 .releases-panel-overlay {
@@ -520,10 +522,12 @@ section {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
 }
 
 .releases-panel.active .releases-panel-content {
     transform: translateX(0);
+    visibility: visible;
 }
 
 /* Panel Header */
