@@ -132,23 +132,25 @@
         #home h1 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 10rem;
-            font-weight: normal;
-            letter-spacing: 0.15em;
+            font-weight: 300;
+            letter-spacing: 0.4em;
             margin-bottom: 2rem;
             line-height: 0.9;
             text-transform: uppercase;
             opacity: 0;
             animation: fadeInUp 1s ease-out forwards;
+            padding-left: 0.4em; /* Compensate for letter-spacing visual center */
         }
 
         #home p {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.875rem;
-            font-weight: normal;
-            letter-spacing: 0.3em;
+            font-weight: 300;
+            letter-spacing: 0.4em;
             text-transform: uppercase;
             opacity: 0;
             animation: fadeInUpSubtle 1s ease-out 0.3s forwards;
+            padding-left: 0.4em; /* Compensate for letter-spacing visual center */
         }
 
         @keyframes fadeInUp {
@@ -185,24 +187,32 @@
 
             #home h1 {
                 font-size: 6rem;
-                letter-spacing: 0.08em;
+                font-weight: 300;
+                letter-spacing: 0.3em;
+                padding-left: 0.3em;
             }
 
             #home p {
                 font-size: 1.125rem;
-                letter-spacing: 0.2em;
+                font-weight: 300;
+                letter-spacing: 0.3em;
+                padding-left: 0.3em;
             }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
             #home h1 {
                 font-size: 7rem;
-                letter-spacing: 0.1em;
+                font-weight: 300;
+                letter-spacing: 0.35em;
+                padding-left: 0.35em;
             }
 
             #home p {
                 font-size: 1.25rem;
-                letter-spacing: 0.25em;
+                font-weight: 300;
+                letter-spacing: 0.35em;
+                padding-left: 0.35em;
             }
         }
     </style>
@@ -317,12 +327,20 @@
                 <div class="releases-header">
                     <h2 class="section-title">Releases</h2>
                     <div class="releases-filter">
-                        <select id="releases-filter-select" aria-label="Filter releases">
-                            <option value="featured">Popular Hits</option>
-                            <option value="latest">Latest Releases</option>
-                            <option value="albums">Albums</option>
-                            <option value="singles">Singles</option>
-                        </select>
+                        <div class="custom-select" id="releases-filter-select" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-label="Filter releases" tabindex="0">
+                            <div class="custom-select-trigger">
+                                <span class="custom-select-value">Popular Hits</span>
+                                <svg class="custom-select-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 12 12">
+                                    <path fill="currentColor" d="M6 9L1 4h10z"/>
+                                </svg>
+                            </div>
+                            <ul class="custom-select-options" role="listbox">
+                                <li class="custom-option selected" data-value="featured" role="option" aria-selected="true" tabindex="0">Popular Hits</li>
+                                <li class="custom-option" data-value="latest" role="option" aria-selected="false" tabindex="0">Latest Releases</li>
+                                <li class="custom-option" data-value="albums" role="option" aria-selected="false" tabindex="0">Albums</li>
+                                <li class="custom-option" data-value="singles" role="option" aria-selected="false" tabindex="0">Singles</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="releases-grid" id="releases-grid">
@@ -364,12 +382,20 @@
                         <button type="button" class="filter-btn" data-filter="single">Singles</button>
                     </div>
                     <div class="panel-sort">
-                        <select id="panel-sort-select" aria-label="Sort releases">
-                            <option value="popularity" selected>Most Popular</option>
-                            <option value="latest">Latest First</option>
-                            <option value="oldest">Oldest First</option>
-                            <option value="title">Title (A-Z)</option>
-                        </select>
+                        <div class="custom-select" id="panel-sort-select" role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-label="Sort releases" tabindex="0">
+                            <div class="custom-select-trigger">
+                                <span class="custom-select-value">Most Popular</span>
+                                <svg class="custom-select-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 12 12">
+                                    <path fill="currentColor" d="M6 9L1 4h10z"/>
+                                </svg>
+                            </div>
+                            <ul class="custom-select-options" role="listbox">
+                                <li class="custom-option selected" data-value="popularity" role="option" aria-selected="true" tabindex="0">Most Popular</li>
+                                <li class="custom-option" data-value="latest" role="option" aria-selected="false" tabindex="0">Latest First</li>
+                                <li class="custom-option" data-value="oldest" role="option" aria-selected="false" tabindex="0">Oldest First</li>
+                                <li class="custom-option" data-value="title" role="option" aria-selected="false" tabindex="0">Title (A-Z)</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="releases-panel-grid" id="releases-panel-grid">
@@ -431,6 +457,8 @@
 
     <!-- External JavaScript - Deferred loading -->
     <script src="scripts/main.js" defer></script>
+    <!-- Custom select dropdown -->
+    <script src="scripts/custom-select.js"></script>
     <!-- Load data first, then releases functionality -->
     <script src="scripts/releases-data.js"></script>
     <script src="scripts/releases.js" defer></script>

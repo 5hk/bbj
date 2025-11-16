@@ -43,6 +43,9 @@
             allReleases = RELEASES_DATA.releases;
             console.log(`Loaded ${allReleases.length} releases`);
             
+            // Update release count in UI
+            updateReleaseCount();
+            
             renderMainGrid();
             renderPanelGrid();
         } catch (error) {
@@ -61,6 +64,23 @@
             
             // Fallback to empty state
             allReleases = [];
+        }
+    }
+
+    // Update release count in UI
+    function updateReleaseCount() {
+        const totalCount = allReleases.length;
+        
+        // Update "View All Releases" button count
+        const releasesCountSpan = document.querySelector('.releases-count');
+        if (releasesCountSpan) {
+            releasesCountSpan.textContent = `(${totalCount})`;
+        }
+        
+        // Update panel header count
+        const releasesTotalSpan = document.querySelector('.releases-total');
+        if (releasesTotalSpan) {
+            releasesTotalSpan.textContent = `(${totalCount})`;
         }
     }
 
@@ -120,7 +140,8 @@
 
     // Main grid filter change
     function handleMainFilterChange(e) {
-        currentFilter = e.target.value;
+        // Handle both native select and custom select events
+        currentFilter = e.detail ? e.detail.value : e.target.value;
         renderMainGrid();
     }
 
@@ -224,7 +245,8 @@
 
     // Handle panel sort
     function handlePanelSort(e) {
-        panelSort = e.target.value;
+        // Handle both native select and custom select events
+        panelSort = e.detail ? e.detail.value : e.target.value;
         renderPanelGrid();
     }
 
