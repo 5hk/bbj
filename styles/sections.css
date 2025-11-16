@@ -250,7 +250,7 @@ section {
     letter-spacing: 2px;
     cursor: pointer;
     user-select: none;
-    min-width: 180px;
+    min-width: 200px;
 }
 
 .custom-select-trigger {
@@ -965,7 +965,7 @@ footer p {
 
     .custom-select {
         font-size: 0.7rem;
-        min-width: 160px;
+        min-width: 200px;
     }
 
     .custom-select-options {
