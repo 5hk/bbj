@@ -437,6 +437,15 @@
             opacity: 1;
         }
 
+        .release-card.active .release-overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 1;
+        }
+
+        .release-card.active .release-cover img {
+            transform: scale(1.05);
+        }
+
         .release-info {
             text-align: center;
             padding: 0 1rem;
@@ -767,10 +776,10 @@
                     <!-- Release 2 -->
                     <div class="release-card">
                         <div class="release-cover">
-                            <img alt="Album Title 2 Cover" src="images/releases/album-cover-default.png"/>
+                            <img alt="너란 빛 (팬텀스쿨 X 가호(Gaho))" src="images/releases/album-cover_light-like-you.jpeg"/>
                             <div class="release-overlay">
                                 <div class="release-info">
-                                    <h3>Album Title 2</h3>
+                                    <h3>너란 빛 (팬텀스쿨 X 가호(Gaho))</h3>
                                     <p>2024.03.15</p>
                                 </div>
                             </div>
@@ -830,5 +839,42 @@
     <footer>
         <p>© 2025 PLAN-G ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <script>
+        // Mobile touch support for release cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const releaseCards = document.querySelectorAll('.release-card');
+            
+            // Check if device is mobile/tablet
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            
+            if (isTouchDevice) {
+                releaseCards.forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Remove active class from all other cards
+                        releaseCards.forEach(otherCard => {
+                            if (otherCard !== card) {
+                                otherCard.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle active class on clicked card
+                        card.classList.toggle('active');
+                    });
+                });
+                
+                // Close overlay when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.release-card')) {
+                        releaseCards.forEach(card => {
+                            card.classList.remove('active');
+                        });
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
