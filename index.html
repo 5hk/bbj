@@ -287,6 +287,7 @@
         }
 
         #about p {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 1.125rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
@@ -302,11 +303,31 @@
             margin-top: 3rem;
         }
 
+        #about .about-image.observe-animation {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
         #about .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
+        }
+
+        @keyframes imageReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #about .about-image.reveal {
+            animation: imageReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         /* Artists Section */
@@ -1046,6 +1067,41 @@
             });
         }
 
+        // About image scroll animation
+        function initAboutImageAnimation() {
+            const aboutImage = document.querySelector('#about .about-image');
+            
+            if (!aboutImage) return;
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -100px 0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        entry.target.classList.remove('observe-animation');
+                    } else {
+                        entry.target.classList.remove('reveal');
+                        entry.target.classList.add('observe-animation');
+                    }
+                });
+            }, observerOptions);
+            
+            // Check if element is already in viewport
+            const rect = aboutImage.getBoundingClientRect();
+            const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (!isInViewport) {
+                aboutImage.classList.add('observe-animation');
+            }
+            
+            observer.observe(aboutImage);
+        }
+
         // Mobile touch support for release cards
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize image loading
@@ -1053,6 +1109,9 @@
             
             // Initialize section title animations
             initSectionTitleAnimation();
+            
+            // Initialize about image animation
+            initAboutImageAnimation();
             
             const releaseCards = document.querySelectorAll('.release-card');
             
