@@ -4,6 +4,8 @@
 section {
     width: 100%;
     padding: 8rem 5%;
+    /* Add scroll offset for fixed header navigation */
+    scroll-margin-top: 90px;
 }
 
 .section-container {
