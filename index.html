@@ -304,7 +304,7 @@
                         <p>We provide comprehensive support for our artists, from music production to global distribution, ensuring their creative vision reaches every corner of the world.</p>
                     </div>
                     <div class="about-image">
-                        <img alt="PLAN-G Entertainment Label Identity" src="images/about/about-plan-g.jpg" loading="lazy" width="1400" height="600"/>
+                        <canvas id="animated-lines-canvas" aria-label="Animated network visualization"></canvas>
                     </div>
                 </div>
             </div>
@@ -495,5 +495,7 @@
     <!-- Load data first, then releases functionality -->
     <script src="scripts/releases-data.js"></script>
     <script src="scripts/releases.js" defer></script>
+    <!-- Animated lines background - Load last to ensure DOM is ready -->
+    <script src="scripts/animated-lines.js"></script>
 </body>
 </html>
