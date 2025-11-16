@@ -253,6 +253,27 @@
             text-transform: uppercase;
         }
 
+        /* Only apply initial hidden state when JS has loaded */
+        .section-title.observe-animation {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes title-reveal {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title.reveal {
+            animation: title-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
         .bg-light-gray {
             background-color: var(--light-gray);
         }
@@ -970,10 +991,51 @@
             });
         }
 
+        // Section title scroll animation
+        function initSectionTitleAnimation() {
+            const sectionTitles = document.querySelectorAll('.section-title');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -100px 0px', // Trigger 100px before element enters viewport
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add reveal animation class
+                        entry.target.classList.add('reveal');
+                        entry.target.classList.remove('observe-animation');
+                    } else {
+                        // When scrolling back out, reset to hidden state
+                        entry.target.classList.remove('reveal');
+                        entry.target.classList.add('observe-animation');
+                    }
+                });
+            }, observerOptions);
+            
+            sectionTitles.forEach(title => {
+                // Check if element is already in viewport (page load)
+                const rect = title.getBoundingClientRect();
+                const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (!isInViewport) {
+                    // Only add observe-animation class if NOT in viewport
+                    title.classList.add('observe-animation');
+                }
+                
+                observer.observe(title);
+            });
+        }
+
         // Mobile touch support for release cards
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize image loading
             initImageLoading();
+            
+            // Initialize section title animations
+            initSectionTitleAnimation();
             
             const releaseCards = document.querySelectorAll('.release-card');
             
