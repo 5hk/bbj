@@ -70,17 +70,39 @@ section {
     transform: scale(1);
 }
 
-#about .about-image canvas {
+#about .about-image img {
     width: 100%;
     height: 100%;
     display: block;
-    background-color: #ffffff;
+    object-fit: cover;
+    object-position: center;
     position: relative;
     z-index: 10;
+    animation: musicalWave 8s ease-in-out infinite;
 }
 
 #about .about-image.reveal {
     animation: imageReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Musical wave animation - subtle floating and scaling effect */
+@keyframes musicalWave {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        filter: brightness(1);
+    }
+    25% {
+        transform: translateY(-8px) scale(1.01);
+        filter: brightness(1.02);
+    }
+    50% {
+        transform: translateY(0) scale(1.02);
+        filter: brightness(1.03);
+    }
+    75% {
+        transform: translateY(-5px) scale(1.01);
+        filter: brightness(1.02);
+    }
 }
 
 /* Artists Section */
