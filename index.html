@@ -259,27 +259,39 @@
         <link rel="stylesheet" href="styles/sections.css">
         <link rel="stylesheet" href="styles/animations.css">
     </noscript>
+
+    <!-- i18next Library - Load before our scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/i18nextBrowserLanguageDetector.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#home">
+            <a href="#home" class="nav-logo">
                 <img alt="PLAN-G" src="images/logo.jpeg"/>
             </a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="#releases">Releases</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button type="button" class="menu-button" aria-label="Toggle menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#artists">Artists</a></li>
+                    <li><a href="#releases">Releases</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <span class="nav-divider desktop-divider">|</span>
+                <!-- Language switcher will be inserted here by JavaScript -->
+            </div>
+            <div class="nav-mobile-controls">
+                <!-- Language switcher will be inserted here for mobile by JavaScript -->
+                <span class="nav-divider mobile-divider">|</span>
+                <button type="button" class="menu-button" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -295,13 +307,13 @@
         <!-- About Section -->
         <section id="about">
             <div class="section-container">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title" data-i18n="about.title">About</h2>
                 <div>
                     <div>
-                        <h3>Where Music Meets Vision</h3>
-                        <p>PLAN-G Entertainment is a forward-thinking music label dedicated to discovering and nurturing exceptional talent. We believe in the power of authentic artistry and innovative sound.</p>
-                        <p>Our mission is to create meaningful connections between artists and audiences worldwide, pushing boundaries while staying true to our artistic integrity.</p>
-                        <p>We provide comprehensive support for our artists, from music production to global distribution, ensuring their creative vision reaches every corner of the world.</p>
+                        <h3 data-i18n="about.heading">Where Music Meets Vision</h3>
+                        <p data-i18n="about.paragraph1">PLAN-G Entertainment is a forward-thinking music label dedicated to discovering and nurturing exceptional talent. We believe in the power of authentic artistry and innovative sound.</p>
+                        <p data-i18n="about.paragraph2">Our mission is to create meaningful connections between artists and audiences worldwide, pushing boundaries while staying true to our artistic integrity.</p>
+                        <p data-i18n="about.paragraph3">We provide comprehensive support for our artists, from music production to global distribution, ensuring their creative vision reaches every corner of the world.</p>
                     </div>
                     <div class="about-image">
                         <img src="images/about/about-main.png" alt="Musical flow visualization" loading="lazy" width="1600" height="500"/>
@@ -440,13 +452,13 @@
         <!-- News Section -->
         <section id="news">
             <div class="section-container">
-                <h2 class="section-title">News</h2>
+                <h2 class="section-title" data-i18n="news.title">News</h2>
                 <div class="news-list">
                     <div class="news-item">
-                        <div class="news-date">Dec 01, 2025</div>
+                        <div class="news-date" data-i18n="news.item1.date">Dec 01, 2025</div>
                         <div class="news-content">
-                            <h3>Welcome to PLAN-G Entertainment</h3>
-                            <p>We're thrilled to announce the launch of our official website. Discover our artists, latest releases, and stay updated with exclusive news. Welcome to where music meets vision.</p>
+                            <h3 data-i18n="news.item1.heading">Welcome to PLAN-G Entertainment</h3>
+                            <p data-i18n="news.item1.content">We're thrilled to announce the launch of our official website. Discover our artists, latest releases, and stay updated with exclusive news. Welcome to where music meets vision.</p>
                         </div>
                     </div>
                 </div>
@@ -456,27 +468,27 @@
         <!-- Contact Section -->
         <section id="contact">
             <div class="section-container">
-                <h2 class="section-title">Contact</h2>
+                <h2 class="section-title" data-i18n="contact.title">Contact</h2>
                 <div class="contact-grid">
                     <div class="contact-column">
-                        <h3>Get In Touch</h3>
+                        <h3 data-i18n="contact.getInTouch">Get In Touch</h3>
                         <p>
-                            <strong class="contact-label">Business Inquiries</strong>
-                            <a href="mailto:business@plan-g.com">business@plan-g.com</a>
+                            <strong class="contact-label" data-i18n="contact.businessInquiries">Business Inquiries</strong>
+                            <a href="mailto:business@plan-g.kr">business@plan-g.kr</a>
                         </p>
                         <p>
-                            <strong class="contact-label">Press & Media</strong>
-                            <a href="mailto:press@plan-g.com">press@plan-g.com</a>
+                            <strong class="contact-label" data-i18n="contact.pressMedia">Press & Media</strong>
+                            <a href="mailto:business@plan-g.kr">business@plan-g.kr</a>
                         </p>
                         <p>
-                            <strong class="contact-label">Artist Management</strong>
-                            <a href="tel:+821011112222">010-1111-2222</a>
+                            <strong class="contact-label" data-i18n="contact.artistManagement">Artist Management</strong>
+                            <a href="tel:+821033692598">010-3369-2598</a>
                         </p>
                     </div>
                     <div class="contact-column">
-                        <h3>We're Always Open to New Ideas</h3>
-                        <p class="contact-description">Whether you're an artist looking for representation, a brand seeking partnership opportunities, or a media outlet interested in our story, we'd love to hear from you.</p>
-                        <p class="contact-description">Let's create something extraordinary together.</p>
+                        <h3 data-i18n="contact.openToIdeas">We're Always Open to New Ideas</h3>
+                        <p class="contact-description" data-i18n="contact.description1">Whether you're an artist looking for representation, a brand seeking partnership opportunities, or a media outlet interested in our story, we'd love to hear from you.</p>
+                        <p class="contact-description" data-i18n="contact.description2">Let's create something extraordinary together.</p>
                     </div>
                 </div>
             </div>
@@ -488,6 +500,10 @@
         <p>© 2025 PLAN-G ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <!-- i18n initialization - Load first -->
+    <script src="scripts/i18n-init.js"></script>
+    <!-- Language switcher - Load after i18n -->
+    <script src="scripts/language-switcher.js"></script>
     <!-- External JavaScript - Deferred loading -->
     <script src="scripts/main.js" defer></script>
     <!-- Custom select dropdown -->

@@ -1,0 +1,28 @@
+{
+  "about": {
+    "title": "About",
+    "heading": "음악과 비전이 만나는 곳",
+    "paragraph1": "PLAN-G Entertainment는 진정성 있는 아티스트를 발굴하고 성장시키는 음악 레이블입니다. 우리는 독창적인 예술성과 혁신적인 사운드가 만드는 힘을 믿습니다.",
+    "paragraph2": "아티스트와 팬 사이의 깊이 있는 연결을 만들고, 음악적 진정성을 지키며 새로운 가능성을 열어갑니다.",
+    "paragraph3": "음악 제작부터 글로벌 유통까지, 아티스트의 창작 여정 전반을 함께하며 그들의 음악이 세계로 뻗어나갈 수 있도록 지원합니다."
+  },
+  "news": {
+    "title": "News",
+    "item1": {
+      "date": "2025.12.30",
+      "heading": "PLAN-G Entertainment에 오신 것을 환영합니다",
+      "content": "PLAN-G Entertainment의 공식 웹사이트가 오픈했습니다. 새로운 음악적 여정의 시작, 그리고 아티스트와 팬을 잇는 특별한 공간. 지금 바로 만나보세요."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "문의 안내",
+    "businessInquiries": "비즈니스 문의",
+    "pressMedia": "언론 및 미디어",
+    "artistManagement": "아티스트 매니지먼트",
+    "openToIdeas": "새로운 가능성을 함께 만들어갑니다",
+    "description1": "아티스트 매니지먼트, 브랜드 파트너십, 미디어 협업 등 다양한 제안을 기다립니다.",
+    "description2": "PLAN-G와 함께 특별한 이야기를 시작하세요."
+  }
+}
+

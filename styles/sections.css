@@ -1,5 +1,238 @@
 /* Sections CSS - Below the fold content */
 
+/* Navigation Right Side */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-divider {
+    color: var(--border-gray);
+    font-size: 1rem;
+    font-weight: 200;
+    user-select: none;
+    opacity: 0.5;
+}
+
+.mobile-divider {
+    display: none;
+}
+
+.nav-mobile-controls {
+    display: none;
+}
+
+/* Mobile Language Switcher - Desktop Style */
+.mobile-lang-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-language-dropdown {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mobile-language-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text-gray);
+    transition: color 0.3s ease;
+}
+
+.mobile-language-dropdown:hover .mobile-language-trigger {
+    color: var(--primary-black);
+}
+
+.mobile-language-code {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+.mobile-language-arrow {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease;
+    color: currentColor;
+    flex-shrink: 0;
+}
+
+.mobile-language-dropdown.active .mobile-language-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-language-options {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: -5px;
+    background-color: var(--primary-white);
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10003;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.mobile-language-dropdown.active .mobile-language-options {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    display: block !important;
+}
+
+.mobile-language-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-gray);
+}
+
+.mobile-language-option:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-black);
+}
+
+.mobile-option-label {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.language-dropdown {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.language-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text-gray);
+    transition: color 0.3s ease;
+}
+
+.language-dropdown:hover .language-trigger {
+    color: var(--primary-black);
+}
+
+.language-dropdown:focus {
+    outline: none;
+}
+
+.language-code {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+.language-arrow {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease;
+    color: currentColor;
+    flex-shrink: 0;
+}
+
+.language-dropdown.active .language-arrow {
+    transform: rotate(180deg);
+}
+
+.language-options {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: -5px;
+    background-color: var(--primary-white);
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10001;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.language-dropdown.active .language-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-gray);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.language-option:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-black);
+}
+
+
+.language-option:focus {
+    outline: none;
+    background-color: var(--light-gray);
+}
+
+.language-label {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+}
+
 /* Section Styles */
 section {
     width: 100%;
@@ -911,6 +1144,66 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .nav-right {
+        display: none;
+    }
+
+    .nav-right.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-white);
+        padding: 2rem 5%;
+        border-bottom: 1px solid var(--border-gray);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-right.active ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    /* Hide language switcher inside hamburger menu */
+    .nav-right .language-switcher {
+        display: none !important;
+    }
+
+    .desktop-divider {
+        display: none;
+    }
+
+    .nav-mobile-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Ensure mobile language switcher is visible */
+    .nav-mobile-controls .mobile-lang-switcher {
+        display: flex !important;
+    }
+
+    .mobile-divider {
+        display: block;
+    }
+
+    .language-code {
+        font-size: 0.8rem;
+    }
+
+    .language-arrow {
+        width: 8px;
+        height: 8px;
+    }
+
     section {
         padding: 4rem 5%;
     }
