@@ -1,0 +1,16 @@
+# robots.txt for plan-g.kr
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow crawling of specific directories (if any)
+# Disallow: /private/
+# Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://plan-g.kr/sitemap.xml
+
+# Crawl-delay (optional, in seconds)
+# Crawl-delay: 1
+
