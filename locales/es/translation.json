@@ -1,0 +1,28 @@
+{
+  "about": {
+    "title": "Acerca de",
+    "heading": "Donde las Personas se Encuentran con la Música",
+    "paragraph1": "PLAN-G Entertainment es un sello musical dedicado a descubrir artistas auténticos y maximizar su potencial.",
+    "paragraph2": "Creemos en el poder de la originalidad artística y el sonido innovador. Creamos conexiones profundas entre artistas y fans, preservamos la verdadera esencia de la música y abrimos nuevas posibilidades.",
+    "paragraph3": "Desde la producción musical hasta la distribución global, acompañamos a los artistas en todo su viaje creativo, convirtiéndonos en un socio confiable para ayudar a que sus voces lleguen al mundo."
+  },
+  "news": {
+    "title": "Noticias",
+    "item1": {
+      "date": "2026.1.1",
+      "heading": "Lanzamiento del Sitio Web Oficial de PLAN-G Entertainment",
+      "content": "PLAN-G Entertainment lanza su sitio web oficial. Comienza un nuevo viaje musical, un espacio especial que conecta artistas y fans. Descúbrelo ahora."
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "getInTouch": "Información de Contacto",
+    "businessInquiries": "Consultas Comerciales",
+    "pressMedia": "Prensa y Medios",
+    "artistManagement": "Gestión de Artistas",
+    "openToIdeas": "Creamos Nuevas Posibilidades Juntos",
+    "description1": "Esperamos propuestas en diversas áreas como gestión de artistas, asociaciones de marca y colaboraciones con medios.",
+    "description2": "Comienza una historia especial con PLAN-G."
+  }
+}
+

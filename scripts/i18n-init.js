@@ -27,7 +27,7 @@ async function initI18next() {
                 fallbackLng: 'en',
                 
                 // Supported languages
-                supportedLngs: ['ko', 'en'],
+                supportedLngs: ['ko', 'en', 'es'],
                 
             // Debug mode (set to true for debugging)
             debug: false,
@@ -166,7 +166,8 @@ function getCurrentLanguage() {
 function getAvailableLanguages() {
     return [
         { code: 'ko', label: 'KOR', name: '한국어', flag: '🇰🇷' },
-        { code: 'en', label: 'ENG', name: 'English', flag: '🇺🇸' }
+        { code: 'en', label: 'ENG', name: 'English', flag: '🇺🇸' },
+        { code: 'es', label: 'ESP', name: 'Español', flag: '🇪🇸' }
     ];
 }
 
