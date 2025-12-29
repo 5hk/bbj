@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Home Page -->
+    <url>
+        <loc>https://plan-g.kr/</loc>
+        <lastmod>2025-12-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://plan-g.kr/#home"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://plan-g.kr/#home"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://plan-g.kr/#home"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://plan-g.kr/#home"/>
+    </url>
+    
+    <!-- About Section -->
+    <url>
+        <loc>https://plan-g.kr/#about</loc>
+        <lastmod>2025-12-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://plan-g.kr/#about"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://plan-g.kr/#about"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://plan-g.kr/#about"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://plan-g.kr/#about"/>
+    </url>
+    
+    <!-- Artists Section -->
+    <url>
+        <loc>https://plan-g.kr/#artists</loc>
+        <lastmod>2025-12-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://plan-g.kr/#artists"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://plan-g.kr/#artists"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://plan-g.kr/#artists"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://plan-g.kr/#artists"/>
+    </url>
+    
+    <!-- Releases Section -->
+    <url>
+        <loc>https://plan-g.kr/#releases</loc>
+        <lastmod>2025-12-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://plan-g.kr/#releases"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://plan-g.kr/#releases"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://plan-g.kr/#releases"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://plan-g.kr/#releases"/>
+    </url>
+    
+    <!-- News Section -->
+    <url>
+        <loc>https://plan-g.kr/#news</loc>
+        <lastmod>2025-12-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://plan-g.kr/#news"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://plan-g.kr/#news"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://plan-g.kr/#news"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://plan-g.kr/#news"/>
+    </url>
+    
+    <!-- Contact Section -->
+    <url>
+        <loc>https://plan-g.kr/#contact</loc>
+        <lastmod>2025-12-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://plan-g.kr/#contact"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://plan-g.kr/#contact"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://plan-g.kr/#contact"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://plan-g.kr/#contact"/>
+    </url>
+    
+</urlset>
+
