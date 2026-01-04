@@ -3,7 +3,7 @@
  * Provides offline functionality and caching
  */
 
-const CACHE_NAME = 'plan-g-v1';
+const CACHE_NAME = 'plan-g-v3';
 const urlsToCache = [
   '/',
   '/index.html',
