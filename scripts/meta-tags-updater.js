@@ -8,19 +8,19 @@
 
     const metaContent = {
         ko: {
-            title: 'PLAN-G ENTERTAINMENT - 사람과 음악이 만나는 곳',
+            title: 'PLAN-G ENTERTAINMENT',
             description: 'PLAN-G Entertainment는 진정성 있는 아티스트를 발굴하고 그들의 잠재력을 극대화하는 뮤직 레이블입니다. 독창적인 예술성과 혁신적인 사운드의 힘을 믿습니다.',
             keywords: 'PLAN-G, PLAN-G Entertainment, 플랜지, 가호, Gaho, 케이팝, 한국 음악, 음악 레이블, 엔터테인먼트, 싱어송라이터',
             ogLocale: 'ko_KR'
         },
         en: {
-            title: 'PLAN-G ENTERTAINMENT - Where Music Meets Vision',
+            title: 'PLAN-G ENTERTAINMENT',
             description: 'PLAN-G Entertainment is a forward-thinking music label dedicated to discovering and nurturing exceptional talent. We believe in the power of authentic artistry and innovative sound.',
             keywords: 'PLAN-G, PLAN-G Entertainment, Gaho, K-pop, Korean music, music label, entertainment company, singer-songwriter',
             ogLocale: 'en_US'
         },
         es: {
-            title: 'PLAN-G ENTERTAINMENT - Donde la Música Encuentra la Visión',
+            title: 'PLAN-G ENTERTAINMENT',
             description: 'PLAN-G Entertainment es un sello musical visionario dedicado a descubrir y nutrir talento excepcional. Creemos en el poder del arte auténtico y el sonido innovador.',
             keywords: 'PLAN-G, PLAN-G Entertainment, Gaho, K-pop, música coreana, sello musical, compañía de entretenimiento, cantautor',
             ogLocale: 'es_ES'
