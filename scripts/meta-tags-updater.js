@@ -8,22 +8,25 @@
 
     const metaContent = {
         ko: {
-            title: 'PLAN-G ENTERTAINMENT',
-            description: 'PLAN-G Entertainment는 진정성 있는 아티스트를 발굴하고 그들의 잠재력을 극대화하는 뮤직 레이블입니다. 독창적인 예술성과 혁신적인 사운드의 힘을 믿습니다.',
-            keywords: 'PLAN-G, PLAN-G Entertainment, 플랜지, 가호, Gaho, 케이팝, 한국 음악, 음악 레이블, 엔터테인먼트, 싱어송라이터',
-            ogLocale: 'ko_KR'
+            title: 'PLAN-G - Korean Music Label | Gaho Official',
+            description: 'PLAN-G (플랜지) is a Korean music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
+            keywords: 'PLAN-G, 플랜지, Gaho, 가호, plan g, Korean music label, K-pop, music entertainment, singer-songwriter, 음악 레이블, 케이팝',
+            ogLocale: 'ko_KR',
+            canonical: 'https://plan-g.io/'
         },
         en: {
-            title: 'PLAN-G ENTERTAINMENT',
-            description: 'PLAN-G Entertainment is a forward-thinking music label dedicated to discovering and nurturing exceptional talent. We believe in the power of authentic artistry and innovative sound.',
-            keywords: 'PLAN-G, PLAN-G Entertainment, Gaho, K-pop, Korean music, music label, entertainment company, singer-songwriter',
-            ogLocale: 'en_US'
+            title: 'PLAN-G - Korean Music Label | Gaho Official',
+            description: 'PLAN-G (플랜지) is a Korean music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
+            keywords: 'PLAN-G, 플랜지, Gaho, 가호, plan g, Korean music label, K-pop, music entertainment, singer-songwriter',
+            ogLocale: 'en_US',
+            canonical: 'https://plan-g.io/'
         },
         es: {
-            title: 'PLAN-G ENTERTAINMENT',
-            description: 'PLAN-G Entertainment es un sello musical visionario dedicado a descubrir y nutrir talento excepcional. Creemos en el poder del arte auténtico y el sonido innovador.',
-            keywords: 'PLAN-G, PLAN-G Entertainment, Gaho, K-pop, música coreana, sello musical, compañía de entretenimiento, cantautor',
-            ogLocale: 'es_ES'
+            title: 'PLAN-G - Korean Music Label | Gaho Official',
+            description: 'PLAN-G (플랜지) is a Korean music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
+            keywords: 'PLAN-G, 플랜지, Gaho, 가호, plan g, Korean music label, K-pop, música coreana, sello musical, cantautor',
+            ogLocale: 'es_ES',
+            canonical: 'https://plan-g.io/'
         }
     };
 
@@ -63,14 +66,26 @@
         // Update keywords
         updateMetaTag('meta[name="keywords"]', content.keywords);
 
+        // Update canonical URL
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink && content.canonical) {
+            canonicalLink.setAttribute('href', content.canonical);
+        }
+
         // Update Open Graph tags
         updateMetaTag('meta[property="og:title"]', content.title);
         updateMetaTag('meta[property="og:description"]', content.description);
         updateMetaTag('meta[property="og:locale"]', content.ogLocale);
+        if (content.canonical) {
+            updateMetaTag('meta[property="og:url"]', content.canonical);
+        }
 
         // Update Twitter Card tags
         updateMetaTag('meta[name="twitter:title"]', content.title);
         updateMetaTag('meta[name="twitter:description"]', content.description);
+        if (content.canonical) {
+            updateMetaTag('meta[name="twitter:url"]', content.canonical);
+        }
 
         // Update html lang attribute
         document.documentElement.lang = lang;
