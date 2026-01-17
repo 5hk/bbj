@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "PLAN-G | 플랜지 - 공식 웹사이트",
+    "description": "PLAN-G(플랜지)는 가호(Gaho)의 공식 음악 레이블입니다. 아티스트 정보, 최신 음원, 공연 소식을 확인하세요.",
+    "keywords": "PLAN-G, 플랜지, plan-g, Gaho, 가호, 가호 소속사, 엔터테인먼트, music label, K-pop"
+  },
   "about": {
     "title": "About",
     "heading": "사람과 음악이 만나는 곳",

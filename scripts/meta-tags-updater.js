@@ -1,99 +1,66 @@
-/**
- * Meta Tags Updater
- * Dynamically updates meta tags based on selected language
- */
-
 (function() {
     'use strict';
 
-    const metaContent = {
-        ko: {
-            title: 'PLAN-G',
-            description: 'PLAN-G (플랜지) is a music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
-            ogLocale: 'ko_KR',
-            canonical: 'https://plan-g.io/?lang=ko'
-        },
-        en: {
-            title: 'PLAN-G',
-            description: 'PLAN-G (플랜지) is a music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
-            ogLocale: 'en_US',
-            canonical: 'https://plan-g.io/?lang=en'
-        },
-        es: {
-            title: 'PLAN-G',
-            description: 'PLAN-G (플랜지) is a music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
-            ogLocale: 'es_ES',
-            canonical: 'https://plan-g.io/?lang=es'
-        }
-    };
-
-    /**
-     * Update meta tag content
-     */
     function updateMetaTag(selector, content) {
         const element = document.querySelector(selector);
         if (element) {
-            if (selector.includes('[property')) {
-                element.setAttribute('content', content);
-            } else {
-                element.setAttribute('content', content);
-            }
+            element.setAttribute('content', content);
         }
     }
 
-    /**
-     * Update page title
-     */
     function updateTitle(title) {
         document.title = title;
     }
 
-    /**
-     * Update all meta tags for the given language
-     */
     function updateMetaTags(lang) {
-        const content = metaContent[lang] || metaContent.en;
+        if (!window.i18next || !window.i18next.isInitialized) {
+            setTimeout(() => updateMetaTags(lang), 50);
+            return;
+        }
 
-        // Update title
-        updateTitle(content.title);
+        const title = window.i18next.t('meta.title', { lng: lang });
+        const description = window.i18next.t('meta.description', { lng: lang });
+        const keywords = window.i18next.t('meta.keywords', { lng: lang });
 
-        // Update description
-        updateMetaTag('meta[name="description"]', content.description);
+        const ogLocaleMap = {
+            ko: 'ko_KR',
+            en: 'en_US',
+            es: 'es_ES'
+        };
+        const ogLocale = ogLocaleMap[lang] || 'en_US';
 
-        // Update canonical URL
+        const canonical = `https://plan-g.io/?lang=${lang}`;
+
+        updateTitle(title);
+
+        updateMetaTag('meta[name="description"]', description);
+
+        updateMetaTag('meta[name="keywords"]', keywords);
+
         const canonicalLink = document.querySelector('link[rel="canonical"]');
-        if (canonicalLink && content.canonical) {
-            canonicalLink.setAttribute('href', content.canonical);
+        if (canonicalLink) {
+            canonicalLink.setAttribute('href', canonical);
         }
 
-        // Update Open Graph tags
-        updateMetaTag('meta[property="og:title"]', content.title);
-        updateMetaTag('meta[property="og:description"]', content.description);
-        updateMetaTag('meta[property="og:locale"]', content.ogLocale);
-        if (content.canonical) {
-            updateMetaTag('meta[property="og:url"]', content.canonical);
-        }
+        updateMetaTag('meta[property="og:title"]', title);
+        updateMetaTag('meta[property="og:description"]', description);
+        updateMetaTag('meta[property="og:locale"]', ogLocale);
+        updateMetaTag('meta[property="og:url"]', canonical);
 
-        // Update Twitter Card tags
-        updateMetaTag('meta[name="twitter:title"]', content.title);
-        updateMetaTag('meta[name="twitter:description"]', content.description);
-        if (content.canonical) {
-            updateMetaTag('meta[name="twitter:url"]', content.canonical);
-        }
+        updateMetaTag('meta[name="twitter:title"]', title);
+        updateMetaTag('meta[name="twitter:description"]', description);
+        updateMetaTag('meta[name="twitter:url"]', canonical);
 
-        // Update html lang attribute
         document.documentElement.lang = lang;
     }
 
-    /**
-     * Initialize meta tags updater
-     */
     function init() {
         function waitForI18next() {
             if (window.i18next && window.i18next.isInitialized) {
-                const currentLang = window.i18next.language || 'en';
+                const currentLang = window.i18next.language || 'ko';
                 updateMetaTags(currentLang);
                 
+                // Listen for language change events
                 window.addEventListener('languageChanged', function(event) {
                     updateMetaTags(event.detail.language);
                 });
