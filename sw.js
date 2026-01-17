@@ -1,9 +1,4 @@
-/**
- * Service Worker for PLAN-G Entertainment
- * Provides offline functionality and caching
- */
-
-const CACHE_NAME = 'plan-g-v6';
+const CACHE_NAME = 'plan-g-v9';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -23,7 +18,6 @@ const urlsToCache = [
   '/locales/es/translation.json'
 ];
 
-// Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -35,11 +29,9 @@ self.addEventListener('install', (event) => {
         console.error('Cache installation failed:', error);
       })
   );
-  // Force the waiting service worker to become the active service worker
   self.skipWaiting();
 });
 
-// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -53,37 +45,42 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
-  // Claim all clients immediately
   return self.clients.claim();
 });
 
-// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  if (!event.request.url.startsWith('http')) {
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request)
+    caches.match(event.request, { ignoreSearch: true })
       .then((response) => {
-        // Cache hit - return response
         if (response) {
           return response;
         }
 
-        // Clone the request
         const fetchRequest = event.request.clone();
 
         return fetch(fetchRequest).then((response) => {
-          // Check if valid response
           if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
 
-          // Clone the response
-          const responseToCache = response.clone();
+          if (event.request.url.startsWith(self.location.origin)) {
+            const responseToCache = response.clone();
+            
+            const requestUrl = new URL(event.request.url);
+            const requestToCache = new Request(requestUrl.pathname);
 
-          // Cache the fetched response
-          caches.open(CACHE_NAME)
-            .then((cache) => {
-              cache.put(event.request, responseToCache);
-            });
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(requestToCache, responseToCache);
+              })
+              .catch((error) => {
+                console.error('Cache put failed:', error);
+              });
+          }
 
           return response;
         }).catch((error) => {
@@ -95,7 +92,6 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Handle messages from clients
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();

@@ -9,24 +9,21 @@
     const metaContent = {
         ko: {
             title: 'PLAN-G',
-            description: 'PLAN-G (플랜지) is a Korean music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
-            keywords: 'PLAN-G, 플랜지, Gaho, 가호, plan g, Korean music label, K-pop, music entertainment, singer-songwriter, 음악 레이블, 케이팝',
+            description: 'PLAN-G (플랜지) is a music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
             ogLocale: 'ko_KR',
-            canonical: 'https://plan-g.io/'
+            canonical: 'https://plan-g.io/?lang=ko'
         },
         en: {
             title: 'PLAN-G',
-            description: 'PLAN-G (플랜지) is a Korean music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
-            keywords: 'PLAN-G, 플랜지, Gaho, 가호, plan g, Korean music label, K-pop, music entertainment, singer-songwriter',
+            description: 'PLAN-G (플랜지) is a music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
             ogLocale: 'en_US',
-            canonical: 'https://plan-g.io/'
+            canonical: 'https://plan-g.io/?lang=en'
         },
         es: {
             title: 'PLAN-G',
-            description: 'PLAN-G (플랜지) is a Korean music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
-            keywords: 'PLAN-G, 플랜지, Gaho, 가호, plan g, Korean music label, K-pop, música coreana, sello musical, cantautor',
+            description: 'PLAN-G (플랜지) is a music entertainment label. Home of artist Gaho (가호). Where People Meet Music.',
             ogLocale: 'es_ES',
-            canonical: 'https://plan-g.io/'
+            canonical: 'https://plan-g.io/?lang=es'
         }
     };
 
@@ -63,9 +60,6 @@
         // Update description
         updateMetaTag('meta[name="description"]', content.description);
 
-        // Update keywords
-        updateMetaTag('meta[name="keywords"]', content.keywords);
-
         // Update canonical URL
         const canonicalLink = document.querySelector('link[rel="canonical"]');
         if (canonicalLink && content.canonical) {
@@ -95,28 +89,28 @@
      * Initialize meta tags updater
      */
     function init() {
-        // Get current language from i18next or default to 'ko'
-        const currentLang = window.i18next?.language || 'ko';
-        updateMetaTags(currentLang);
-
-        // Listen for language changes
-        if (window.i18next) {
-            window.i18next.on('languageChanged', function(lng) {
-                updateMetaTags(lng);
-            });
+        function waitForI18next() {
+            if (window.i18next && window.i18next.isInitialized) {
+                const currentLang = window.i18next.language || 'en';
+                updateMetaTags(currentLang);
+                
+                window.addEventListener('languageChanged', function(event) {
+                    updateMetaTags(event.detail.language);
+                });
+            } else {
+                setTimeout(waitForI18next, 50);
+            }
         }
+        
+        waitForI18next();
     }
 
-    // Wait for i18next to be ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(init, 100);
-        });
+        document.addEventListener('DOMContentLoaded', init);
     } else {
-        setTimeout(init, 100);
+        init();
     }
 
-    // Export for manual updates
     window.updateMetaTags = updateMetaTags;
 })();
 

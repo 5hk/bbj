@@ -16,9 +16,9 @@
     <link rel="canonical" href="https://plan-g.io/"/>
     
     <!-- Language Alternates -->
-    <link rel="alternate" hreflang="ko" href="https://plan-g.io/"/>
-    <link rel="alternate" hreflang="en" href="https://plan-g.io/"/>
-    <link rel="alternate" hreflang="es" href="https://plan-g.io/"/>
+    <link rel="alternate" hreflang="ko" href="https://plan-g.io/?lang=ko"/>
+    <link rel="alternate" hreflang="en" href="https://plan-g.io/?lang=en"/>
+    <link rel="alternate" hreflang="es" href="https://plan-g.io/?lang=es"/>
     <link rel="alternate" hreflang="x-default" href="https://plan-g.io/"/>
     
     <!-- Open Graph Meta Tags (Facebook, LinkedIn, etc.) -->
@@ -73,6 +73,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <link rel="preload" as="image" href="/images/logo.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/about/about-main.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="/images/artists/artist-v1.jpg">
     
     <!-- Google Fonts - Non-blocking async load -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Bebas+Neue&family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400&family=Noto+Serif+KR:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -685,6 +689,44 @@
                     </div>
                 </div>
             </div>
+            
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "NewsArticle",
+                "headline": "Welcome to PLAN-G Entertainment",
+                "description": "We're thrilled to announce the launch of our official website. Discover our artists, latest releases, and stay updated with exclusive news.",
+                "datePublished": "2025-12-01T00:00:00+09:00",
+                "dateModified": "2025-12-01T00:00:00+09:00",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://plan-g.io/#organization",
+                    "name": "PLAN-G Entertainment"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://plan-g.io/#organization",
+                    "name": "PLAN-G Entertainment",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://plan-g.io/images/logo.jpeg",
+                        "width": 500,
+                        "height": 500
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://plan-g.io/#news"
+                },
+                "articleSection": "Company News",
+                "keywords": ["PLAN-G", "Entertainment", "Music Label", "Gaho", "Official Website Launch"],
+                "inLanguage": "en",
+                "about": {
+                    "@type": "Organization",
+                    "@id": "https://plan-g.io/#organization"
+                }
+            }
+            </script>
         </section>
 
         <!-- Contact Section -->
