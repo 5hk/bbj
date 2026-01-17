@@ -1,16 +1,9 @@
-# robots.txt for plan-g.io
+# robots.txt for PLAN-G Entertainment
+# https://plan-g.io
 
-# Allow all crawlers
+# Allow all search engines to crawl everything
 User-agent: *
 Allow: /
 
-# Disallow crawling of specific directories (if any)
-# Disallow: /private/
-# Disallow: /temp/
-
 # Sitemap location
 Sitemap: https://plan-g.io/sitemap.xml
-
-# Crawl-delay (optional, in seconds)
-# Crawl-delay: 1
-
