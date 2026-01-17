@@ -105,6 +105,19 @@
             scroll-behavior: smooth;
         }
 
+        /* Visually hidden class for SEO */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
         .font-hero {
             font-family: 'Bebas Neue', sans-serif;
         }
@@ -508,7 +521,7 @@
         <!-- Hero Section -->
         <section id="home">
             <div class="hero-content">
-                <h1>PLAN-G</h1>
+                <h1>PLAN-G<span class="visually-hidden"> Entertainment - Korean Music Label | Home of Gaho</span></h1>
                 <p>Entertainment</p>
             </div>
         </section>
