@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>PLAN-G | 플랜지 - 플랜지 엔터테인먼트 공식 웹사이트</title>
-    <meta name="description" content="PLAN-G(플랜지)는 가호(Gaho)의 공식 음악 레이블입니다. 아티스트 정보, 최신 음원, 공연 소식을 확인하세요. 플랜지엔터테인먼트는 새로운 가치를 만드는 뮤직 레이블입니다."/>
+    <title>(주)플랜지엔터테인먼트 | PLAN-G Entertainment</title>
+    <meta name="description" content="진정성 있는 음악으로 세상과 연결되는 곳, PLAN-G Entertainment. 가호(Gaho)의 공식 음악 레이블로서 아티스트 정보와 최신 소식을 전합니다.">
     <meta name="keywords" content="PLAN-G, 플랜지, 플랜지엔터테인먼트, PLAN-G Entertainment, plan-g, Gaho, 가호, 가호 소속사, 엔터테인먼트, music label, K-pop"/>
 
     <meta name="naver-site-verification" content="c339a3ffe0aed96f7f8516daa45c6e6afa491b3a" />
@@ -23,8 +23,8 @@
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://plan-g.io/"/>
     <meta property="og:site_name" content="PLAN-G"/>
-    <meta property="og:title" content="PLAN-G | 플랜지 - 공식 웹사이트"/>
-    <meta property="og:description" content="PLAN-G(플랜지)는 가호(Gaho)의 공식 음악 레이블입니다. 아티스트 정보, 최신 음원, 공연 소식을 확인하세요."/>
+    <meta property="og:title" content="(주)플랜지엔터테인먼트 | PLAN-G Entertainment">
+    <meta property="og:description" content="진정성 있는 음악으로 세상과 연결되는 곳, PLAN-G Entertainment">
     <meta property="og:image" content="https://plan-g.io/images/og/og-image.jpg"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
@@ -340,223 +340,49 @@
     {
         "@context": "https://schema.org",
         "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://plan-g.io/#website",
+            "url": "https://plan-g.io/",
+            "name": "PLAN-G Entertainment",
+            "alternateName": ["플랜지", "플랜지엔터테인먼트", "plan-g", "PLAN-G", "Plan-G", "플랜지 엔터테인먼트", "PLANG"],
+            "publisher": { "@id": "https://plan-g.io/#organization" }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://plan-g.io/#organization",
+            "name": "PLAN-G Entertainment",
+            "legalName": "(주)플랜지엔터테인먼트",
+            "url": "https://plan-g.io/",
+            "logo": "https://plan-g.io/images/logo.jpeg",
+            "description": "진정성 있는 음악으로 세상과 연결되는 곳, PLAN-G Entertainment",
+            "sameAs": [
+            "https://www.instagram.com/ad_gaho",
+            "https://www.youtube.com/gaho_official"
+            ]
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://plan-g.io/#faq",
+            "mainEntity": [
             {
-                "@type": "Organization",
-                "@id": "https://plan-g.io/#organization",
-                "name": "PLAN-G",
-                "legalName": "PLAN-G Entertainment",
-                "alternateName": ["플랜지", "plan-g", "PLAN-G", "Plan-G", "PLAN G", "플랜지 엔터테인먼트", "가호 소속사", "Gaho Label"],
-                "url": "https://plan-g.io/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://plan-g.io/images/logo.jpeg",
-                    "width": 500,
-                    "height": 500
-                },
-                "image": "https://plan-g.io/images/og/og-image.jpg",
-                "description": "PLAN-G(플랜지)는 가호(Gaho)의 공식 음악 레이블입니다. Where People Meet Music.",
-                "foundingDate": "2020",
-                "slogan": "Where People Meet Music",
-                "keywords": "PLAN-G, 플랜지, plan-g, Gaho, 가호, 가호 소속사, Music label, K-pop, entertainment, music label",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+82-10-3369-2598",
-                    "contactType": "Artist Management",
-                    "email": "contact@plan-g.io",
-                    "areaServed": "KR",
-                    "availableLanguage": ["Korean", "English", "Spanish"]
-                },
-                "sameAs": [
-                    "https://www.instagram.com/ad_gaho",
-                    "https://www.youtube.com/gaho_official",
-                    "https://open.spotify.com/artist/3ybZTNrlK0QhL4rBxfLHOc",
-                    "https://x.com/gaho88882970",
-                    "https://www.tiktok.com/@ad_gaho"
-                ],
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "KR"
-                },
-                "member": {
-                    "@id": "https://plan-g.io/#gaho"
+                "@type": "Question",
+                "name": "PLAN-G는 어떤 회사인가요?",
+                "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PLAN-G(플랜지)는 가호(Gaho)의 공식 음악 레이블입니다. 진정성 있는 아티스트를 발굴하여 세상과 연결합니다."
                 }
             },
             {
-                "@type": "MusicGroup",
-                "@id": "https://plan-g.io/#gaho",
-                "name": "Gaho",
-                "alternateName": ["가호", "Gaho Official", "가호 공식", "AD_GAHO"],
-                "url": "https://plan-g.io/#artists",
-                "mainEntityOfPage": "https://plan-g.io/",
-                "image": [
-                    "https://plan-g.io/images/artists/artist-v1.jpg",
-                    "https://plan-g.io/images/artists/artist-v2.jpg",
-                    "https://plan-g.io/images/artists/artist-v3.jpg"
-                ],
-                "genre": ["K-pop", "Pop", "R&B", "Korean music", "OST"],
-                "description": "Gaho (가호) is a talented Korean singer-songwriter under PLAN-G Entertainment, known for his powerful vocals and emotional performances.",
-                "foundingDate": "2018",
-                "member": {
-                    "@type": "Person",
-                    "name": "Gaho",
-                    "alternateName": "가호",
-                    "givenName": "Gaho",
-                    "birthDate": "1997-09-14",
-                    "nationality": "Korean",
-                    "jobTitle": "Singer-Songwriter",
-                    "award": [
-                        {
-                            "@type": "Award",
-                            "name": "Mnet Asian Music Awards - Best OST",
-                            "dateAwarded": "2020"
-                        },
-                        {
-                            "@type": "Award",
-                            "name": "Soribada Best K-Music Awards - Hallyu OST Award",
-                            "dateAwarded": "2020"
-                        }
-                    ]
-                },
-                "album": {
-                    "@type": "MusicAlbum",
-                    "name": "PLANETARIUM CASE#1",
-                    "albumProductionType": "http://schema.org/StudioAlbum",
-                    "albumReleaseType": "http://schema.org/EPRelease",
-                    "datePublished": "2018",
-                    "byArtist": {
-                        "@type": "MusicGroup",
-                        "name": "PLT"
-                    }
-                },
-                "sameAs": [
-                    "https://www.instagram.com/ad_gaho",
-                    "https://www.youtube.com/gaho_official",
-                    "https://open.spotify.com/artist/3ybZTNrlK0QhL4rBxfLHOc",
-                    "https://x.com/gaho88882970",
-                    "https://www.tiktok.com/@ad_gaho"
-                ],
-                "recordLabel": {
-                    "@id": "https://plan-g.io/#organization"
+                "@type": "Question",
+                "name": "비즈니스 문의는 어떻게 하나요?",
+                "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "모든 비즈니스 문의는 contact@plan-g.io로 메일 주시기 바랍니다."
                 }
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://plan-g.io/#website",
-                "url": "https://plan-g.io/",
-                "name": "PLAN-G",
-                "alternateName": [
-                    "플랜지",
-                    "플랜지엔터테인먼트",
-                    "PLAN-G Entertainment",
-                    "plang",
-                    "plan-g",
-                    "Plan-G",
-                    "플랜지 엔터테인먼트",
-                    "가호",
-                    "Gaho",
-                    "gaho",
-                    "가호 소속사",
-                    "Gaho 소속사",
-                    "gaho 소속사",
-                    "Gaho Official",
-                    "가호 공식",
-                    "AD_GAHO",
-                ],
-                "description": "진정성 있는 음악으로 세상과 연결되는 곳, PLAN-G Entertainment",
-                "about": {
-                    "@id": "https://plan-g.io/#organization"
-                },
-                "publisher": {
-                    "@id": "https://plan-g.io/#organization"
-                },
-                "inLanguage": ["ko-KR", "en-US", "es-ES"],
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://plan-g.io/?s={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://plan-g.io/#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://plan-g.io/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "About",
-                        "item": "https://plan-g.io/#about"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "Artists",
-                        "item": "https://plan-g.io/#artists"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 4,
-                        "name": "Releases",
-                        "item": "https://plan-g.io/#releases"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 5,
-                        "name": "News",
-                        "item": "https://plan-g.io/#news"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 6,
-                        "name": "Contact",
-                        "item": "https://plan-g.io/#contact"
-                    }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://plan-g.io/#faq",
-                "inLanguage": "ko",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "PLAN-G는 어떤 회사인가요?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "PLAN-G(플랜지)는 가호(Gaho)의 공식 음악 레이블입니다. 진정성 있는 아티스트를 발굴하고 그들의 잠재력을 극대화하며, 2026년부터 K-pop 씬에서 활동하고 있습니다."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "가호는 어떤 아티스트인가요?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "가호는 1997년생 싱어송라이터로, 2018년 PLT의 'PLANETARIUM CASE#1' EP로 데뷔했습니다. 2020년 엠넷 아시안 뮤직 어워즈 베스트 OST상과 소리바다 베스트 케이뮤직 어워즈 신한류 OST상을 수상하며, 파워풀한 보컬과 감성적인 퍼포먼스로 K-pop 씬에서 주목받고 있습니다."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "PLAN-G 소속 아티스트는 누구인가요?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "현재 PLAN-G의 소속 아티스트는 가호(Gaho)입니다. 싱어송라이터로서 Start, Rush Hour 등의 대표곡으로 알려져 있습니다."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "PLAN-G 비즈니스 문의는 어떻게 하나요?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "비즈니스 문의는 contact@plan-g.io로 이메일 주시거나, 아티스트 매니지먼트는 010-3369-2598로 연락주시기 바랍니다. 브랜드 파트너십, 미디어 협업 등 다양한 제안을 환영합니다."
-                        }
-                    }
-                ]
             }
+            ]
+        }
         ]
     }
     </script>
