@@ -139,12 +139,17 @@ async function changeLanguage(language) {
 
 function updateURLParameter(key, value, replaceState = false) {
     const url = new URL(window.location.href);
+    
+    const hash = window.location.hash;
+    
     url.searchParams.set(key, value);
     
+    const newUrl = url.toString() + hash;
+    
     if (replaceState) {
-        window.history.replaceState({ language: value }, '', url.toString());
+        window.history.replaceState({ language: value }, '', newUrl);
     } else {
-        window.history.pushState({ language: value }, '', url.toString());
+        window.history.pushState({ language: value }, '', newUrl);
     }
 }
 
