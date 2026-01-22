@@ -1,7 +1,7 @@
 {
   "name": "PLAN-G Entertainment",
   "short_name": "PLAN-G",
-  "description": "PLAN-G Entertainment - Where Music Meets Vision",
+  "description": "음악과 콘텐츠로 세계를 연결하는 아티스트 매니지먼트 & IP 스튜디오. PLAN-G Entertainment",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -36,4 +36,3 @@
     }
   ]
 }
-
