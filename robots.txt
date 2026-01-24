@@ -7,3 +7,5 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://plan-g.io/sitemap.xml
+
+#DaumWebMasterTool:a3b5a77317e2dcace410a0686a88c275e88d096c82129d90d6ad412825c0535f:+tEmOlkLt0ILEJtIdfzY0g==
